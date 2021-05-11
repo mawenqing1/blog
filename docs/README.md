@@ -13,3 +13,5 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
 ::: danger
 emmmm.... 本博主非技术性博主，所以懂的都懂....欢迎各位大佬留言指正。
 :::
+
+<Vssue :options="{ locale: 'zh' }"/>

@@ -6,7 +6,15 @@ module.exports = {
     head: [
         ['link', { rel: 'icon', href: '/assets/img/favicon.ico' }],
         ['meta', { name: 'author', content: '热爱生活 喜欢睡觉' }],
-        ['meta', { name: 'keywords', content: '热爱生活 喜欢睡觉的博客  vuepress搭建个人博客  IT博客  前端学习' }]
+        ['meta', { name: 'keywords', content: '热爱生活 喜欢睡觉的博客  vuepress搭建个人博客  IT博客  前端学习' }],
+        ['link', { rel: 'manifest', href: '/manifest.json' }],
+        ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+        ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+        ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+        ['link', { rel: 'apple-touch-icon', href: '/icons/apple-touch-icon-152x152.png' }],
+        ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#3eaf7c' }],
+        ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
+        ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
     ],
     plugins: [
         [
@@ -28,6 +36,20 @@ module.exports = {
                     buttonText: "刷新"
                 }
             }
+        ],
+        [
+            '@vssue/vuepress-plugin-vssue',
+            {
+                // 设置 `platform` 而不是 `api`
+                platform: 'github-v4',
+
+                // 其他的 Vssue 配置
+                owner: 'mawenqing1',
+                repo: 'blog',
+                clientId: '5af877824b90d4671bf6',
+                clientSecret: 'f516e9cd2307134d70d31eefb54342ba955c06b9',
+                autoCreateIssue: true
+            },
         ],
     ],
     themeConfig: {
