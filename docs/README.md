@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /hero.png
-# heroText: 热爱生活喜欢睡觉的博客
+heroText: 热爱生活喜欢睡觉的博客
 tagline: 没事自己瞎写点博文
 actionText: 查看笔记 →
 actionLink: /synopsis/guide

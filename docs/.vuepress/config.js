@@ -1,7 +1,6 @@
 const moment = require('moment');
 
 module.exports = {
-    base: '/blog/',
     title: "热爱生活喜欢睡觉的博客",
     description: "热爱生活 喜欢睡觉的博客",
     head: [
@@ -19,7 +18,17 @@ module.exports = {
                     return moment(timestamp).format("LLLL")
                 }
             }
-        ]
+        ],
+        [
+            '@vuepress/pwa',
+            {
+                serviceWorker: true,
+                updatePopup: {
+                    message: "有新的内容.",
+                    buttonText: "刷新"
+                }
+            }
+        ],
     ],
     themeConfig: {
         logo: '/assets/img/logo.png',
