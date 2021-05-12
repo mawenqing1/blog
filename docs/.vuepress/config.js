@@ -1,5 +1,4 @@
 const moment = require('moment');
-const moment = require('../.vuepress/secret');
 
 module.exports = {
     title: "热爱生活喜欢睡觉",
@@ -47,8 +46,8 @@ module.exports = {
                 // 其他的 Vssue 配置
                 owner: 'mawenqing1',
                 repo: 'blog',
-                clientId: secret.clientId,
-                clientSecret: secret.clientSecret,
+                clientId: '5af877824b90d4671bf6',
+                clientSecret: 'f516e9cd2307134d70d31eefb54342ba955c06b9',
                 autoCreateIssue: true
             },
         ],
