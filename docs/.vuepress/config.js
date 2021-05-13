@@ -52,6 +52,9 @@ module.exports = {
             },
         ],
         [
+            "vuepress-plugin-auto-sidebar", {}
+        ],
+        [
             '@vuepress/back-to-top', true
         ]
     ],
@@ -66,9 +69,16 @@ module.exports = {
                 ariaLabel: ' ',
                 items: [
                     { text: 'HTML', link: '/frontend/HTML/' },
-                    { text: 'JavaScript', link: '/frontend/JavaScript/' },
                     { text: 'CSS', link: '/frontend/CSS/' },
+                    { text: 'JavaScript', link: '/frontend/JavaScript/' },
                     { text: 'Vue', link: '/frontend/Vue/' }
+                ]
+            },
+            {
+                text: '开发工具',
+                ariaLabel: ' ',
+                items: [
+                    { text: 'git', link: '/pit/git/' }
                 ]
             },
             {
@@ -81,14 +91,6 @@ module.exports = {
             },
             { text: 'GitHub', link: 'https://github.com/mawenqing1/blog' },
         ],
-        sidebar: {
-            '/synopsis/': [
-                'guide',
-                'about-me',
-                'other'
-            ],
-
-        },
     }
 
 }
