@@ -56,7 +56,12 @@ module.exports = {
         ],
         [
             '@vuepress/back-to-top', true
-        ]
+        ],
+        [
+            '@vuepress/medium-zoom', {
+                selector: 'img'
+            }
+        ],
     ],
     themeConfig: {
         // logo: '/assets/img/logo.png',
