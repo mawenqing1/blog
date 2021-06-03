@@ -11,6 +11,7 @@ module.exports = {
                 { text: 'HTML', link: '/frontend/HTML/' },
                 { text: 'CSS', link: '/frontend/CSS/' },
                 { text: 'JavaScript', link: '/frontend/JavaScript/' },
+                { text: 'HTTP', link: '/frontend/HTTP/' },
                 { text: 'Vue', link: '/frontend/Vue/' }
             ]
         },
