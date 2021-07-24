@@ -46,7 +46,6 @@ const fsSource = `
 ```
 
 特别注意：写完记得写分号！否则将会报错
----
 
 uniform与attribute类似，都是存储限定符，主要的区别如下：
 
@@ -57,7 +56,6 @@ attribute
 uniform
 
 可以用于顶点着色器，也可以用于片元着色器，用来表示一致的、不变的数据（每个顶点中该值都一样）
----
 
 片源着色器需要声明浮点数精度`precision lowp/mediump/highp float`
 
