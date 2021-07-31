@@ -2,11 +2,23 @@
 title: TypeScript简介
 ---
 
-TypeScript简介
+什么是TypeScript
 ===
 
-TS相对于JS编程“更安全”，更安全是什么意思呢？
+- TypeScript 是添加了类型系统的 JavaScript，适用于任何规模的项目  
 
-JS在编程时会尝试修正错误，但这个很好的特性会导致后期出现很多未知的bug（例如： 3 + []  //输出结果为"3"）。遇到显而易见的无效操作时，JS并没有抛出异常，而是尽自己所能，避免抛出异常，这样不方便编程人员快速捕获问题所在。
+- TypeScript 是一门静态类型、弱类型的语言  
 
-而TS会在输入代码的过程中抛出错误，不用再等到事后发现再进行修改，这样更利于后期的维护和理解。
+- TypeScript 是完全兼容 JavaScript 的，它不会修改 JavaScript 运行时的特性  
+
+- TypeScript 可以编译为 JavaScript，然后运行在浏览器、Node.js 等任何能运行 JavaScript 的环境中  
+
+- TypeScript 拥有很多编译选项，类型检查的严格程度由你决定  
+
+- TypeScript 可以和 JavaScript 共存，这意味着 JavaScript 项目能够渐进式的迁移到 TypeScript  
+
+- TypeScript 增强了编辑器（IDE）的功能，提供了代码补全、接口提示、跳转到定义、代码重构等能力  
+
+- TypeScript 拥有活跃的社区，大多数常用的第三方库都提供了类型声明  
+
+- TypeScript 与标准同步发展，符合最新的 ECMAScript 标准（stage 3）
