@@ -138,4 +138,37 @@ let g:3.14 = 666            //不能将类型‘666’分配给类型‘3.14’
 
 3.可以明确告知TS值的类型为number（e）  
 
-4.可以明确告知TS值为某个具体数字（f和g）
+4.可以明确告知TS值为某个具体数字（f和g）  
+
+### 5.bigint  
+
+bigint是JS和TS新引入的类型，在处理较大的整数时，不必再担心舍入误差。number类型表示的最大整数为2^53^，而bigint能表示的数比这大的多。bigint类型包含所有BigInt数，支持加减乘除和比较。以下为bigint类型使用示例：  
+
+```ts
+let a = 12345n               //bigint
+const b = 56789n             //56789n
+var c = a + b                //bigint
+let d = a < 123              //boolean
+let e = 66.6n                //bigint 文本必须是整数
+let f:bigint = 100n          //bigint
+let g:100n = 100n            //100n
+let h:bigint = 100           //不能将类型‘100’分配给类型‘bigint’
+```
+
+声明bigint类型与boolean及number类似，就不一一赘述了。  
+
+### 6.string  
+
+string包含所有字符串，以及可以对字符串执行的操作，例如拼接字符串（+）、切片（.slice）等。以下为string类型使用示例：  
+
+```ts
+let a = 'hello mwq'            //string
+var b = 'mwqYYDS'              //string
+const c = '?'                  //'?'
+let d = a + '' + b + c         //string
+let e:string = 'zoom'          //string
+let f:'mwq' = 'mwq'            //'mwq'
+let g:'mwq' = 'qwm'            //不能将类型'qwm'分配给类型'mwq'
+```  
+
+声明string类型与boolean及number类似，这里也就不一一赘述了。
