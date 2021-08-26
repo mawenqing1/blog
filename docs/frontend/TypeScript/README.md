@@ -7,7 +7,7 @@ title: TypeScript简介
 
 - TypeScript 是添加了类型系统的 JavaScript，适用于任何规模的项目  
 
-- TypeScript 是一门静态类型、弱类型的语言  
+- TypeScript 是一门静态、弱类型的语言  
 
 - TypeScript 是完全兼容 JavaScript 的，它不会修改 JavaScript 运行时的特性  
 

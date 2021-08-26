@@ -18,13 +18,13 @@ module.exports = {
                 { text: 'WebGL', link: '/frontend/WebGL/' },
             ]
         },
-        {
-            text: '周报',
-            ariaLabel: ' ',
-            items: [
-                { text: 'Weekly', link: '/Weekly/' }
-            ]
-        },
+        // {
+        //     text: '周报',
+        //     ariaLabel: ' ',
+        //     items: [
+        //         { text: 'Weekly', link: '/Weekly/' }
+        //     ]
+        // },
         {
             text: '开发工具',
             ariaLabel: ' ',
