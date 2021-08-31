@@ -1,6 +1,6 @@
 ---
 title: 接口
-autoPrev: assertion
+autoPrev: guard
 ---   
 
 # 接口  
@@ -9,7 +9,9 @@ autoPrev: assertion
 
 TypeScript的核心原则之一是对值所具有的结构进行类型检查。 它有时被称做“鸭式辨型法”或“结构性子类型化”。 在TypeScript里，接口的作用就是为这些类型命名和为你的代码或第三方代码定义契约。与类型别名相似，接口是一种命名类型的方式，这样就无需在行内定义。  
 
-先看类型别名与接口二者的相似之处：  
+## 接口与类型别名的区别
+
+1. 两者都可以用来描述对象或函数的类型，但是语法不同 
 
 ```ts
 type mwq = {
@@ -29,18 +31,46 @@ interface mwq {
 }
 ```  
 
-在使用mwq类型别名的地方都能使用mwq接口。两个声明都定义结构，且二者可以相互赋值，接口同样支持可选属性。  
+2. 两者都可以扩展，但是语法又有所不同。此外，请注意接口和类型别名不是互斥的。接口可以扩展类型别名，反之亦然   
 
-类型和接口的区别：  
+Interface extends interface  
 
-1.类型别名更通用，右边可以是任何类型，包括类型表达式（类型，外加&或|等类型运算符）；而在接口声明中，右边必须为结构。下述例子便不可用接口重写：  
+```ts
+interface PartialPointX { x: number }
+interface Point extends PartialPointX { y: number }
+```  
+
+type alias extends type alias  
+
+```ts
+type PartialPointX = { x: number }
+type Point = PartialPointX & { y: number }
+```  
+
+Interface extends type alias  
+
+```ts
+type PartialPointX = { x: number }
+interface Point extends PartialPointX { y: number }
+```  
+
+Type alias extends interface  
+
+```ts
+interface PartialPointX { x: number }
+type Point = PartialPointX & { y: number }
+```
+
+
+
+3. 类型别名更通用，右边可以是任何类型，包括类型表达式（类型，外加&或|等类型运算符）；而在接口声明中，右边必须为结构。下述例子便不可用接口重写：  
 
 ```ts
 type A = number
 type B = A | string
 ```  
 
-2.扩展接口时，TS将检查扩展的接口是否可赋值给被扩展的接口。例如：  
+4. 扩展接口时，TS将检查扩展的接口是否可赋值给被扩展的接口。例如：  
 
 ```ts
 interface A {
@@ -58,7 +88,7 @@ interface B extends A {
 }                              
 ```  
 
-3.同一作用域中的多个同名接口将自动合并；同一作用域中的多个同名类型别名将导致编译错误。  
+5. 同一作用域中的多个同名接口将自动合并；同一作用域中的多个同名类型别名将导致编译错误。  
 
 ## 函数类型  
 
