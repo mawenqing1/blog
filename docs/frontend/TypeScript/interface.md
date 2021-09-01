@@ -1,6 +1,6 @@
 ---
 title: 接口
-autoPrev: guard
+autoPrev: function
 ---   
 
 # 接口  
@@ -33,28 +33,28 @@ interface mwq {
 
 2. 两者都可以扩展，但是语法又有所不同。此外，请注意接口和类型别名不是互斥的。接口可以扩展类型别名，反之亦然   
 
-Interface extends interface  
+**interface extends interface**  
 
 ```ts
 interface PartialPointX { x: number }
 interface Point extends PartialPointX { y: number }
 ```  
 
-type alias extends type alias  
+**type alias extends type alias**  
 
 ```ts
 type PartialPointX = { x: number }
 type Point = PartialPointX & { y: number }
 ```  
 
-Interface extends type alias  
+**interface extends type alias**  
 
 ```ts
 type PartialPointX = { x: number }
 interface Point extends PartialPointX { y: number }
 ```  
 
-Type alias extends interface  
+**type alias extends interface**  
 
 ```ts
 interface PartialPointX { x: number }
@@ -90,6 +90,58 @@ interface B extends A {
 
 5. 同一作用域中的多个同名接口将自动合并；同一作用域中的多个同名类型别名将导致编译错误。  
 
-## 函数类型  
+```ts
+interface Point { x: number; }
+interface Point { y: number; }
 
-接口能够描述JavaScript中对象拥有的各种各样的外形。 除了描述带有属性的普通对象外，接口也可以描述函数类型。
+const point: Point = { x: 1, y: 2 };
+```
+
+## 对象类型  
+
+TypeScript 中的接口是一个非常灵活的概念，也常用于对对象进行描述：  
+
+```ts
+interface Person {
+  name: string;
+  age: number;
+}
+
+let mwq: Person = {
+  name: "mwq",
+  age: 23,
+};
+```  
+
+## 只读与可选属性  
+
+### 只读属性  
+
+一些对象属性只能在对象刚刚创建的时候修改其值。 你可以在属性名前用 `readonly` 来指定只读属性：  
+
+```ts
+interface Point {
+    readonly x: number;
+    readonly y: number;
+}
+
+let p1: Point = { x: 10, 
+                  y: 20 
+                };
+
+p1.x = 5; // error!
+```
+
+设置只读属性时，什么时候用`const`，什么时候用`readonly`?
+
+### 可选属性 
+
+接口里的属性不全都是必需的。 有些是只在某些条件下存在，或者根本不存在。  
+
+```ts
+interface Person {
+    name:string;
+    age?:number;
+}
+```  
+

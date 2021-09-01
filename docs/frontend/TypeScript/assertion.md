@@ -58,7 +58,8 @@ function myFunc(numGenerator: NumGenerator | undefined) {
 ```ts
 let x: number;
 initialize();
-// Variable 'x' is used before being assigned.(2454)
+// Variable 'x' is used before being assigned.(2454) 
+//无法重新声明块范围变量“x”
 console.log(2 * x); // Error
 
 function initialize() {

@@ -85,8 +85,8 @@ evaluatePrice(myTruck);
 对于以上代码，TypeScript 编译器将会提示以下错误信息：  
 
 ```ts
-Property 'capacity' does not exist on type 'Vehicle'.
-Property 'capacity' does not exist on type 'Motorcycle'.
+Property 'capacity' does not exist on type 'Vehicle'.      //类型“Vehicle”上不存在属性“capacity”。
+Property 'capacity' does not exist on type 'Motorcycle'.   //类型“Motorcycle”上不存在属性“capacity”
 ```  
 
 原因是在`Motorcycle`接口中，并不存在`capacity`属性，而对于`Car`接口来说，它也不存在`capacity`属性。那么，现在我们应该如何解决以上问题呢？这时，我们可以使用类型守卫。下面我们来重构一下前面定义的`evaluatePrice`方法，重构后的代码如下：  

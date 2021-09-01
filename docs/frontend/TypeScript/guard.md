@@ -1,6 +1,6 @@
 ---
 title: 类型守卫
-autoPrev: joint
+autoPrev: cross
 ---   
 
 # 类型守卫  
