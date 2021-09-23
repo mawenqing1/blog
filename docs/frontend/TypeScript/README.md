@@ -2,8 +2,8 @@
 title: TypeScript简介
 ---
 
-什么是TypeScript
-===
+# 什么是TypeScript
+
 
 - TypeScript 是添加了类型系统的 JavaScript，适用于任何规模的项目  
 

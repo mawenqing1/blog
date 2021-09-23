@@ -16,6 +16,7 @@ module.exports = {
                 { text: 'Vue', link: '/frontend/Vue/' },
                 { text: 'React', link: '/frontend/React/' },
                 { text: 'WebGL', link: '/frontend/WebGL/' },
+                { text: 'webpack', link: '/frontend/webpack/' },
             ]
         },
         // {
